@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 0.0, 65.0, 763.0, 891.0 ],
+		"rect" : [ 0.0, 65.0, 343.0, 829.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,6 +46,8 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "preset", "int", "preset", "int", "" ],
 					"patching_rect" : [ 28.0, 255.0, 85.0, 16.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 241.0, 164.0, 85.0, 16.0 ],
 					"preset_data" : [ 						{
 							"number" : 1,
 							"data" : [ 5, "obj-69", "live.numbox", "float", 0.0, 5, "obj-68", "live.numbox", "float", 56.792911529541016, 5, "obj-72", "live.numbox", "float", 23.0, 5, "obj-59", "live.numbox", "float", 4.0, 5, "obj-56", "live.numbox", "float", 1.0, 5, "obj-57", "live.numbox", "float", 10.0, 5, "obj-58", "live.numbox", "float", 100.0 ]
@@ -228,7 +230,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 307.0, 80.0, 5.0, 100.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 213.0, 7.0, 5.0, 130.0 ],
+					"presentation_rect" : [ 210.0, 7.0, 8.0, 158.0 ],
 					"saved_attribute_attributes" : 					{
 						"linecolor" : 						{
 							"expression" : ""
@@ -552,13 +554,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-44",
-					"linecount" : 3,
+					"linecount" : 4,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 85.0, 138.0, 65.0, 49.0 ],
-					"text" : "100 10 1 4 0.23 0.567929"
+					"patching_rect" : [ 85.0, 138.0, 65.0, 62.0 ],
+					"text" : "100 10 53 4 0.978031 1."
 				}
 
 			}
@@ -705,7 +707,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 353.0, 726.0, 266.0, 49.0 ],
-					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231214_02_hexagram_music.mid"
+					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231214_03_hexagram_music.mid"
 				}
 
 			}
@@ -842,7 +844,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 35.199999999999989, 702.0, 138.0, 35.0 ],
-					"text" : "20231214_02_hexagram_music.mid"
+					"text" : "20231214_03_hexagram_music.mid"
 				}
 
 			}
@@ -952,6 +954,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 575.0, 553.0, 55.0, 23.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 283.0, 193.0, 55.0, 23.0 ],
 					"text" : "midiout"
 				}
 
