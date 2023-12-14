@@ -7,7 +7,7 @@ import argparse
 
 
 class GeneticMusic:
-    def __init__(self, hexagram_number, base_duration, harmonicity_ratio, dynamics_ratio):
+    def __init__(self, hexagram_number, base_duration, harmonicity_ratio):
         # Generate all 64 possible combinations of 6-character strings (hexagrams) using 'Y' and 'N'.
         # Each hexagram represents a unique pattern for generating musical motifs.
         self.hexagrams = [''.join(h)
@@ -48,7 +48,6 @@ class GeneticMusic:
 
         }
         self.harmonicity_ratio = harmonicity_ratio
-        self.dynamics_ratio = dynamics_ratio
 
     def generate_initial_population(self, size=10, mode=None):
         population = []
