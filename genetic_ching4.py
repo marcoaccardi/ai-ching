@@ -7,7 +7,7 @@ import argparse
 
 
 class GeneticMusic:
-    def __init__(self, hexagram_number, base_duration, harmonicity_ratio, dynamics_ratio):
+    def __init__(self, hexagram_number, base_duration):
         # Generate all 64 possible combinations of 6-character strings (hexagrams) using 'Y' and 'N'.
         # Each hexagram represents a unique pattern for generating musical motifs.
         self.hexagrams = [''.join(h)
@@ -47,9 +47,11 @@ class GeneticMusic:
             6: [60, 68],  # Aeolian
 
         }
-        self.harmonicity_ratio = harmonicity_ratio
-        self.dynamics_ratio = dynamics_ratio
 
+    # Generates an initial population of motifs (hexagrams)
+    # based on a specified musical mode.
+    # Each motif is a 6-character string ('Y' or 'N'),
+    # representing the presence or absence of a note.
     def generate_initial_population(self, size=10, mode=None):
         population = []
         for _ in range(size):
@@ -148,35 +150,31 @@ class GeneticMusic:
     def mutate(self, motif, mode, generation, max_generations, mutation_rate):
         mutation_point = random.randint(0, len(motif) - 1)
         mutation_choice = random.random()
-        hexagram = self.initial_hexagram  # Choose a random hexagram
+        hexagram = random.choice(self.hexagrams)  # Choose a random hexagram
         print(hexagram)
         # Adjust mutation behavior based on the generation
         generation_factor = generation / max_generations
 
+        # New mutation logic based on mutation_rate
         if random.random() < mutation_rate:
-            # Apply harmonicity ratio
-            consonant_intervals = [3, 4, 5, 7]  # More consonant intervals
-            random_intervals = list(range(1, 8))  # More random intervals
-
-            # Interpolate between random and consonant intervals based on harmonicity_ratio
-            interval_choices = random_intervals + \
-                consonant_intervals[:int(
-                    len(consonant_intervals) * self.harmonicity_ratio)]
-            interval = random.choice(interval_choices)
-
+            # Perfect fourth, fifth, etc.
+            interval = random.choice([3, 4, 5, 7])
             motif = [(note + interval if note != -1 else note)
                      for note in motif]
 
         # Original mutation logic
         if motif[mutation_point] == -1:  # If it's a rest
             if hexagram[mutation_point] == 'Y':
+                # Higher chance to change rest to a note in later generations
                 if mutation_choice < (0.5 + generation_factor * 0.2):
                     motif[mutation_point] = random.choice(self.modes[mode])
         else:  # If it's a note
             if hexagram[mutation_point] == 'Y':
+                # Chance to mutate to a different note increases over generations
                 if mutation_choice < (0.3 + generation_factor * 0.2):
                     motif[mutation_point] = random.choice(self.modes[mode])
             else:
+                # Chance to mutate to a rest or extended scale note
                 if mutation_choice < 0.4:
                     motif[mutation_point] = -1
                 else:
@@ -278,8 +276,8 @@ class GeneticMusic:
 # Main
 
 
-def main(generations, population_size, hexagram_number, base_duration, mutation_rate, harmonicity_ratio):
-    gm = GeneticMusic(hexagram_number, base_duration, harmonicity_ratio)
+def main(generations, population_size, hexagram_number, base_duration, mutation_rate):
+    gm = GeneticMusic(hexagram_number, base_duration)
     mode = random.choice(list(gm.modes.keys()))
 
     final_motifs = gm.run_genetic_algorithm(
@@ -305,10 +303,8 @@ if __name__ == "__main__":
                         required=True, help='Base duration for notes')
     parser.add_argument('--mutation_rate', type=float,
                         required=True, help='Mutation rate for genetic algorithm')
-    parser.add_argument('--harmonicity_ratio', type=float,
-                        required=True, help='Harmonicity ratio from 0 to 1')
 
     args = parser.parse_args()
 
     main(args.generations, args.population, args.hexagram,
-         args.base_duration, args.mutation_rate, args.harmonicity_ratio)
+         args.base_duration, args.mutation_rate)

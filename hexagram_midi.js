@@ -90,3 +90,42 @@ m.addHandler("deleteAllFiles", () => {
 
 // This keeps the Node.js process open
 m.post("Node.js script is running...");
+
+m.addHandler(
+  "generate",
+  (
+    generation,
+    population,
+    hexagram,
+    baseDuration,
+    mutation_rate,
+    harmonicity
+  ) => {
+    let envName = "generative-music"; // Name of your Python environment
+    let pythonScriptPath = "./genetic_ching3.py"; // Path to your Python script
+
+    // Concatenate the command into a single line
+    let command =
+      `source ${envName}/bin/activate && ` +
+      `python3 ${pythonScriptPath} ` +
+      `--generations ${generation} ` +
+      `--population ${population} ` +
+      `--hexagram ${hexagram} ` +
+      `--base_duration ${baseDuration} ` +
+      `--mutation_rate ${mutation_rate} ` +
+      `--harmonicity_ratio ${harmonicity}`;
+    // `--dynamics ${dynamics}`;
+
+    exec(command, (err, stdout, stderr) => {
+      if (err) {
+        // Node couldn't execute the command
+        m.post(`exec error: ${err}`);
+        return;
+      }
+
+      // the *entire* stdout and stderr (buffered)
+      m.post(`stdout: ${stdout}`);
+      m.post(`stderr: ${stderr}`);
+    });
+  }
+);
