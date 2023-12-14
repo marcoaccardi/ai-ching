@@ -2,7 +2,13 @@
 [presentation](https://docs.google.com/presentation/d/1wSeUJE2EYxV_REA8xXIxVVzF6P0pRR2fOopGCzstfs4/edit?usp=sharing)
 [hexagram_rules](https://www.lovetoknow.com/home/design-decor/i-ching-hexagrams)
 
+```bash
+python3 -m venv generative_music
+source generative_music/bin/activate
+```
 
+**run the script**
+`python3 genetic_ching3.py <num gen> <popul<tion>``
 
 ### SUMMARY
 This code represents a creative application of genetic algorithms to music composition. Each motif, represented as a combination of 'Y' and 'N', undergoes evolution through genetic operations like selection, crossover, and mutation. The fitness function, which evaluates these motifs, is based on various musical criteria. The final motifs are then translated into music sequences, demonstrating how abstract genetic information can be transformed into actual music. The use of music21 allows for the conversion of these sequences into MIDI files, making the compositions audible.

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 99.0, 1089.0, 762.0 ],
+		"rect" : [ 34.0, 99.0, 805.0, 762.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,24 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 327.0, 314.0, 55.0, 22.0 ],
+					"text" : "pipe 100"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 395.0, 699.0, 32.0, 22.0 ],
+					"patching_rect" : [ 384.0, 303.0, 32.0, 22.0 ],
 					"text" : "t b b"
 				}
 
@@ -57,7 +69,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 254.0, 565.5, 80.0, 22.0 ],
+					"patching_rect" : [ 243.0, 169.5, 80.0, 22.0 ],
 					"text" : "deleteAllFiles"
 				}
 
@@ -71,7 +83,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 664.0, 799.0, 50.0, 22.0 ]
+					"patching_rect" : [ 653.0, 403.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -83,7 +95,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 664.0, 826.0, 141.0, 35.0 ],
+					"patching_rect" : [ 653.0, 430.0, 141.0, 35.0 ],
 					"text" : "meta timesignature 4 2 24 8"
 				}
 
@@ -95,7 +107,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 395.5, 534.5, 105.0, 22.0 ],
+					"patching_rect" : [ 384.5, 138.5, 105.0, 22.0 ],
 					"text" : "START READING"
 				}
 
@@ -107,7 +119,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 528.0, 565.5, 29.5, 22.0 ],
+					"patching_rect" : [ 517.0, 169.5, 29.5, 22.0 ],
 					"text" : "t b l"
 				}
 
@@ -119,7 +131,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 441.0, 573.0, 66.0, 22.0 ],
+					"patching_rect" : [ 430.0, 177.0, 66.0, 22.0 ],
 					"text" : "TURNOFF"
 				}
 
@@ -132,7 +144,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 441.0, 611.0, 24.0, 24.0 ]
+					"patching_rect" : [ 430.0, 215.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -144,7 +156,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 364.0, 660.0, 24.0, 24.0 ]
+					"patching_rect" : [ 327.0, 231.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -155,7 +167,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 364.0, 699.0, 32.0, 22.0 ],
+					"patching_rect" : [ 327.0, 270.0, 32.0, 22.0 ],
 					"text" : "t b b"
 				}
 
@@ -168,8 +180,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 364.0, 1090.0, 266.0, 49.0 ],
-					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231213_091842_motif_YNYNNY.mid"
+					"patching_rect" : [ 353.0, 694.0, 266.0, 49.0 ],
+					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231214_094817_1_motif_1.mid"
 				}
 
 			}
@@ -181,7 +193,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 395.5, 571.0, 24.0, 24.0 ]
+					"patching_rect" : [ 384.5, 175.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -193,7 +205,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 364.0, 813.0, 50.0, 22.0 ]
+					"patching_rect" : [ 327.0, 415.893948000000023, 50.0, 22.0 ]
 				}
 
 			}
@@ -204,7 +216,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
-					"patching_rect" : [ 364.0, 781.0, 61.0, 22.0 ],
+					"patching_rect" : [ 327.0, 383.893948000000023, 61.0, 22.0 ],
 					"text" : "counter"
 				}
 
@@ -217,7 +229,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 364.0, 737.0, 24.0, 24.0 ]
+					"patching_rect" : [ 327.0, 341.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -225,15 +237,15 @@
 				"box" : 				{
 					"fontface" : 0,
 					"id" : "obj-11",
-					"linecount" : 33,
+					"linecount" : 50,
 					"maxclass" : "o.compose",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 58.0, 17.0, 497.0, 433.0 ],
+					"patching_rect" : [ 17.0, 769.0, 497.0, 651.0 ],
 					"saved_bundle_data" : [  ],
 					"saved_bundle_length" : 0,
-					"text" : "Control Over Note Duration: The current implementation uses random note durations. To have more control, you could define a function or a mapping that determines note duration based on specific criteria, such as the position of the note in the hexagram or the musical mode.\n\nDynamics Control: Dynamics (loudness or softness) are not currently represented. You could add a dynamic level to each note or chord. This could be randomized or based on some aspect of the hexagram or mode. Music21 allows you to set dynamics for notes and chords.\n\nPolyphony Management: Right now, the polyphony is fixed at three parts. Consider allowing the number of polyphonic parts to be variable, controlled by a parameter.\n\nLength of Generation and Coherence: To ensure coherence over a longer piece, consider implementing musical phrases or motifs that recur or evolve throughout the piece. This could be based on repeating or transforming elements of the hexagram or by developing a theme-and-variations approach.\n\nLong-Term Dependencies: To achieve coherence over time, you could implement a system that remembers previous parts of the composition and builds upon them. This could involve thematic development, variations, or callbacks to earlier musical ideas.\n\nCode Optimization: Consider optimizing the code for efficiency, especially if you plan to generate longer pieces of music. This might involve more efficient data structures or algorithms.\n\nUser Input for Customization: Allowing user input for aspects like the number of polyphonic parts, the length of the composition, and the choice of hexagrams and modes can make the tool more interactive and versatile."
+					"text" : "Mutation Process:\n\nUse hexagrams to determine the probability or type of mutation. For instance, the pattern of 'Y' and 'N' in a hexagram could influence whether a note is mutated, turned into a rest, or replaced with a note from the extended scale.\nCrossover Strategy:\n\nEach hexagram could represent a different crossover strategy. For example, the number of 'Y's in a hexagram might determine the crossover point or how the parents' motifs are combined.\nDynamic Fitness Function:\n\nHexagrams can be used to dynamically alter the criteria in the fitness function. Different hexagrams could prioritize different musical aspects like melodic interest, conformity to scale, or rhythmic complexity.\nRhythmic Patterns:\n\nUse hexagrams to create unique rhythmic patterns in your motifs. The sequence of 'Y' and 'N' can be mapped to different note durations or rhythmic variations.\nHarmonic Progressions:\n\nAssign specific harmonic progressions or chord changes to different hexagrams. This can guide the harmonic structure of generated motifs.\nPolyphonic Textures:\n\nIn a polyphonic setting, different hexagrams can be used to determine the interaction between different voices or parts, influencing how they harmonize or contrast with each other.\nStructural Changes:\n\nUse hexagrams to introduce structural changes in the composition, like changes in tempo, key, or mode, at specific points.\nAdaptive Learning:\n\nThe algorithm can learn from previous generations, and hexagrams can be a part of this learning process. For example, certain hexagrams could trigger adaptations based on the success or failure of previous generations.\nInteractive Composition:\n\nIf the algorithm is part of an interactive system, hexagrams can be used as inputs from users, influencing the direction of the music generation based on user choices or interactions.\nStylistic Variation:\n\nDifferent hexagrams can be associated with different musical styles or influences, allowing the algorithm to shift between various styles during the generation process."
 				}
 
 			}
@@ -244,7 +256,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 528.0, 534.5, 56.0, 22.0 ],
+					"patching_rect" : [ 517.0, 138.5, 56.0, 22.0 ],
 					"text" : "r filePath"
 				}
 
@@ -255,7 +267,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 291.0, 1113.0, 58.0, 22.0 ],
+					"patching_rect" : [ 280.0, 717.0, 58.0, 22.0 ],
 					"text" : "s filePath"
 				}
 
@@ -267,7 +279,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 418.0, 1010.5, 31.0, 22.0 ],
+					"patching_rect" : [ 407.0, 614.5, 31.0, 22.0 ],
 					"text" : "t b s"
 				}
 
@@ -279,7 +291,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 291.0, 1055.0, 158.0, 22.0 ],
+					"patching_rect" : [ 280.0, 659.0, 158.0, 22.0 ],
 					"text" : "combine location / filename"
 				}
 
@@ -292,7 +304,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 291.0, 959.5, 246.0, 35.0 ],
+					"patching_rect" : [ 280.0, 563.5, 246.0, 35.0 ],
 					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation"
 				}
 
@@ -305,8 +317,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 46.199999999999989, 1066.0, 138.0, 35.0 ],
-					"text" : "20231213_091842_motif_YNYNNY.mid"
+					"patching_rect" : [ 35.199999999999989, 670.0, 138.0, 35.0 ],
+					"text" : "20231214_094817_1_motif_1.mid"
 				}
 
 			}
@@ -317,7 +329,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.0, 783.0, 96.0, 22.0 ],
+					"patching_rect" : [ 53.0, 387.0, 96.0, 22.0 ],
 					"text" : "prepend append"
 				}
 
@@ -330,13 +342,13 @@
 					"fontsize" : 13.0,
 					"hint" : "Double-click to assign the file to analyze",
 					"id" : "obj-37",
-					"items" : [ "20231213_091842_motif_YNYNNY.mid", ",", "20231213_091842_motif_YNYYNY.mid", ",", "20231213_091842_motif_YNYYYN.mid", ",", "20231213_091842_motif_YNYYYY.mid", ",", "20231213_091842_motif_YYNYNY.mid", ",", "20231213_091842_motif_YYNYYY.mid", ",", "20231213_091842_motif_YYYNNY.mid", ",", "20231213_091842_motif_YYYNYY.mid", ",", "20231213_091842_motif_YYYYNN.mid", ",", "20231213_091842_motif_YYYYNY.mid", ",", "20231213_091842_motif_YYYYYY.mid" ],
+					"items" : [ "20231214_094817_0_motif_0.mid", ",", "20231214_094817_1_motif_1.mid", ",", "20231214_094817_2_motif_2.mid", ",", "20231214_094817_3_motif_3.mid", ",", "20231214_094817_4_motif_4.mid", ",", "20231214_094817_5_motif_5.mid", ",", "20231214_094817_6_motif_6.mid", ",", "20231214_094817_7_motif_7.mid", ",", "20231214_094817_8_motif_8.mid", ",", "20231214_094817_9_motif_9.mid" ],
 					"maxclass" : "chooser",
 					"numinlets" : 1,
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 14.0, 822.893948495388031, 271.0, 222.606051504611969 ],
+					"patching_rect" : [ 3.0, 426.893948495388031, 271.0, 222.606051504611969 ],
 					"prefix" : "Macintosh HD:/Users/marco/Documents/maestron_data/Maestron_Data/LIBRARY/MAIN/Electric Hip Hop/bass_legato/Electric Hip Hop 93bpm c 1-4_Parvus.wav/",
 					"presentation" : 1,
 					"presentation_rect" : [ 17.039232611656189, 80.151379346847534, 316.0, 502.0 ],
@@ -353,7 +365,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 64.0, 718.0, 129.0, 22.0 ],
+					"patching_rect" : [ 53.0, 322.0, 129.0, 22.0 ],
 					"text" : "route file clear location"
 				}
 
@@ -367,7 +379,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 169.0, 779.893948000000023, 150.0, 22.0 ]
+					"patching_rect" : [ 158.0, 383.893948000000023, 150.0, 22.0 ]
 				}
 
 			}
@@ -378,7 +390,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 548.0, 860.0, 29.5, 22.0 ],
+					"patching_rect" : [ 537.0, 464.0, 29.5, 22.0 ],
 					"text" : "0"
 				}
 
@@ -390,7 +402,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 575.5, 672.0, 29.5, 22.0 ],
+					"patching_rect" : [ 564.5, 276.0, 29.5, 22.0 ],
 					"text" : "t b l"
 				}
 
@@ -402,7 +414,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 586.0, 832.5, 62.0, 22.0 ],
+					"patching_rect" : [ 575.0, 436.5, 62.0, 22.0 ],
 					"text" : "midiflush"
 				}
 
@@ -415,7 +427,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 586.0, 897.0, 55.0, 23.0 ],
+					"patching_rect" : [ 575.0, 521.0, 55.0, 23.0 ],
 					"text" : "midiout"
 				}
 
@@ -427,7 +439,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 635.0, 710.0, 31.0, 22.0 ],
+					"patching_rect" : [ 624.0, 314.0, 31.0, 22.0 ],
 					"text" : "stop"
 				}
 
@@ -439,7 +451,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 528.0, 672.0, 32.0, 22.0 ],
+					"patching_rect" : [ 517.0, 276.0, 32.0, 22.0 ],
 					"text" : "start",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
@@ -452,7 +464,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 575.5, 631.0, 49.0, 22.0 ],
+					"patching_rect" : [ 564.5, 252.0, 49.0, 22.0 ],
 					"text" : "read $1"
 				}
 
@@ -464,7 +476,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "bang", "" ],
-					"patching_rect" : [ 586.0, 737.0, 40.0, 22.0 ],
+					"patching_rect" : [ 575.0, 341.0, 40.0, 22.0 ],
 					"text" : "seq"
 				}
 
@@ -477,8 +489,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 575.5, 565.5, 265.0, 49.0 ],
-					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231213_091842_motif_YYYYNN.mid"
+					"patching_rect" : [ 564.5, 169.5, 265.0, 49.0 ],
+					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231214_094817_9_motif_9.mid"
 				}
 
 			}
@@ -498,7 +510,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 847.0, 615.0, 400.0, 220.0 ],
+					"patching_rect" : [ 836.0, 219.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -510,7 +522,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 572.0, 395.0, 64.0, 22.0 ],
+					"patching_rect" : [ 561.0, -1.0, 64.0, 22.0 ],
 					"text" : "script start"
 				}
 
@@ -522,7 +534,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 572.0, 428.0, 294.0, 22.0 ],
+					"patching_rect" : [ 561.0, 32.0, 294.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 1,
 						"defer" : 0,
@@ -540,7 +552,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 548.0, 805.0, 35.0, 22.0 ],
+					"patching_rect" : [ 537.0, 409.0, 35.0, 22.0 ],
 					"text" : "clear"
 				}
 
@@ -549,7 +561,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-32", 0 ],
-					"midpoints" : [ 581.5, 496.0, 73.5, 496.0 ],
+					"midpoints" : [ 570.5, 100.0, 62.5, 100.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -606,6 +618,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
+					"midpoints" : [ 406.5, 380.25, 584.5, 380.25 ],
 					"source" : [ "obj-2", 1 ]
 				}
 
@@ -620,7 +633,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 263.5, 597.5, 374.5, 597.5, 374.5, 417.0, 581.5, 417.0 ],
+					"midpoints" : [ 252.5, 201.5, 363.5, 201.5, 363.5, 21.0, 570.5, 21.0 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
@@ -628,7 +641,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-37", 0 ],
-					"midpoints" : [ 178.5, 811.89394824769397, 23.5, 811.89394824769397 ],
+					"midpoints" : [ 167.5, 415.89394824769397, 12.5, 415.89394824769397 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -642,6 +655,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-38", 0 ],
 					"source" : [ "obj-24", 0 ]
 				}
@@ -650,7 +670,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
-					"midpoints" : [ 450.5, 705.0, 644.5, 705.0 ],
+					"midpoints" : [ 439.5, 309.0, 633.5, 309.0 ],
 					"order" : 0,
 					"source" : [ "obj-25", 0 ]
 				}
@@ -659,7 +679,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
-					"midpoints" : [ 450.5, 802.0, 595.5, 802.0 ],
+					"midpoints" : [ 439.5, 406.0, 584.5, 406.0 ],
 					"order" : 1,
 					"source" : [ "obj-25", 0 ]
 				}
@@ -676,7 +696,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-42", 1 ],
-					"midpoints" : [ 300.5, 1083.0, 620.5, 1083.0 ],
+					"midpoints" : [ 289.5, 687.0, 609.5, 687.0 ],
 					"order" : 0,
 					"source" : [ "obj-26", 0 ]
 				}
@@ -699,7 +719,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
-					"midpoints" : [ 427.5, 1042.5, 544.5, 1042.5, 544.5, 946.5, 300.5, 946.5 ],
+					"midpoints" : [ 416.5, 646.5, 533.5, 646.5, 533.5, 550.5, 289.5, 550.5 ],
 					"source" : [ "obj-28", 0 ]
 				}
 
@@ -721,7 +741,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-37", 0 ],
-					"midpoints" : [ 73.5, 813.446974247694016, 23.5, 813.446974247694016 ],
+					"midpoints" : [ 62.5, 417.446974247694016, 12.5, 417.446974247694016 ],
 					"source" : [ "obj-31", 0 ]
 				}
 
@@ -730,7 +750,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 1,
-					"midpoints" : [ 183.5, 742.0, 205.0, 742.0, 205.0, 616.0, 585.0, 616.0 ],
+					"midpoints" : [ 172.5, 346.0, 194.0, 346.0, 194.0, 244.0, 574.0, 244.0 ],
 					"source" : [ "obj-32", 3 ]
 				}
 
@@ -738,7 +758,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-29", 1 ],
-					"midpoints" : [ 146.833333333333314, 770.25, 527.5, 770.25 ],
+					"midpoints" : [ 135.833333333333314, 374.25, 516.5, 374.25 ],
 					"source" : [ "obj-32", 2 ]
 				}
 
@@ -753,7 +773,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-37", 0 ],
-					"midpoints" : [ 110.166666666666657, 772.946974247694016, 23.5, 772.946974247694016 ],
+					"midpoints" : [ 99.166666666666657, 376.946974247694016, 12.5, 376.946974247694016 ],
 					"source" : [ "obj-32", 1 ]
 				}
 
@@ -761,7 +781,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 1 ],
-					"midpoints" : [ 183.5, 742.0, 205.0, 742.0, 205.0, 496.0, 831.0, 496.0 ],
+					"midpoints" : [ 172.5, 346.0, 194.0, 346.0, 194.0, 100.0, 820.0, 100.0 ],
 					"source" : [ "obj-32", 3 ]
 				}
 
@@ -799,6 +819,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-28", 0 ],
+					"midpoints" : [ 163.699999999999989, 659.5, 290.100000000000023, 659.5, 290.100000000000023, 603.5, 416.5, 603.5 ],
 					"order" : 0,
 					"source" : [ "obj-37", 3 ]
 				}
@@ -807,7 +828,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-28", 0 ],
-					"midpoints" : [ 73.900000000000006, 1055.5, 289.100000000000023, 1055.5, 289.100000000000023, 999.5, 427.5, 999.5 ],
+					"midpoints" : [ 62.899999999999999, 659.5, 278.100000000000023, 659.5, 278.100000000000023, 603.5, 416.5, 603.5 ],
 					"order" : 0,
 					"source" : [ "obj-37", 1 ]
 				}
@@ -816,6 +837,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-37", 0 ],
+					"midpoints" : [ 336.5, 449.0, 303.5, 449.0, 303.5, 415.893948495388031, 12.5, 415.893948495388031 ],
 					"source" : [ "obj-38", 0 ]
 				}
 
@@ -850,15 +872,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"midpoints" : [ 386.5, 776.25, 595.5, 776.25 ],
-					"source" : [ "obj-5", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
+					"destination" : [ "obj-23", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -896,7 +910,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
-					"midpoints" : [ 606.0, 771.0, 435.0, 771.0, 435.0, 654.0, 373.5, 654.0 ],
+					"midpoints" : [ 595.0, 375.0, 424.0, 375.0, 424.0, 258.0, 336.5, 258.0 ],
 					"source" : [ "obj-8", 1 ]
 				}
 
