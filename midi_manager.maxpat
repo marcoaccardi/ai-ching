@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 0.0, 65.0, 343.0, 720.0 ],
+		"rect" : [ 0.0, 65.0, 883.0, 830.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 564.666666666666629, 119.0, 39.0, 22.0 ],
+					"text" : "/ 100."
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-84",
 					"maxclass" : "button",
@@ -594,8 +606,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 85.0, 138.0, 65.0, 62.0 ],
-					"text" : "5000 9 36 5 0.559055 1."
+					"patching_rect" : [ 10.0, 104.0, 65.0, 62.0 ],
+					"text" : "100 10 1 4 0.23 0.567929 0.19685"
 				}
 
 			}
@@ -603,11 +615,11 @@
 				"box" : 				{
 					"id" : "obj-41",
 					"maxclass" : "newobj",
-					"numinlets" : 6,
+					"numinlets" : 7,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 150.0, 108.0, 95.0, 22.0 ],
-					"text" : "pak 0 0 0 0 0. 0."
+					"patching_rect" : [ 150.0, 108.0, 108.0, 22.0 ],
+					"text" : "pak 0 0 0 0 0. 0. 0."
 				}
 
 			}
@@ -618,8 +630,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 85.0, 170.5, 156.0, 22.0 ],
-					"text" : "generate $1 $2 $3 $4 $5 $6"
+					"patching_rect" : [ 85.0, 170.5, 173.0, 22.0 ],
+					"text" : "generate $1 $2 $3 $4 $5 $6 $7"
 				}
 
 			}
@@ -742,7 +754,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 353.0, 726.0, 266.0, 49.0 ],
-					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231215_04_hexagram_music.mid"
+					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231215_00_hexagram_music.mid"
 				}
 
 			}
@@ -798,12 +810,12 @@
 				"box" : 				{
 					"fontface" : 0,
 					"id" : "obj-11",
-					"linecount" : 50,
+					"linecount" : 49,
 					"maxclass" : "o.compose",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 15.0, 871.0, 511.0, 651.0 ],
+					"patching_rect" : [ 15.0, 871.0, 517.0, 638.0 ],
 					"saved_bundle_data" : [  ],
 					"saved_bundle_length" : 0,
 					"text" : "Mutation Process:\n\nUse hexagrams to determine the probability or type of mutation. For instance, the pattern of 'Y' and 'N' in a hexagram could influence whether a note is mutated, turned into a rest, or replaced with a note from the extended scale.\nCrossover Strategy:\n\nEach hexagram could represent a different crossover strategy. For example, the number of 'Y's in a hexagram might determine the crossover point or how the parents' motifs are combined.\nDynamic Fitness Function:\n\nHexagrams can be used to dynamically alter the criteria in the fitness function. Different hexagrams could prioritize different musical aspects like melodic interest, conformity to scale, or rhythmic complexity.\nRhythmic Patterns:\n\nUse hexagrams to create unique rhythmic patterns in your motifs. The sequence of 'Y' and 'N' can be mapped to different note durations or rhythmic variations.\nHarmonic Progressions:\n\nAssign specific harmonic progressions or chord changes to different hexagrams. This can guide the harmonic structure of generated motifs.\nPolyphonic Textures:\n\nIn a polyphonic setting, different hexagrams can be used to determine the interaction between different voices or parts, influencing how they harmonize or contrast with each other.\nStructural Changes:\n\nUse hexagrams to introduce structural changes in the composition, like changes in tempo, key, or mode, at specific points.\nAdaptive Learning:\n\nThe algorithm can learn from previous generations, and hexagrams can be a part of this learning process. For example, certain hexagrams could trigger adaptations based on the success or failure of previous generations.\nInteractive Composition:\n\nIf the algorithm is part of an interactive system, hexagrams can be used as inputs from users, influencing the direction of the music generation based on user choices or interactions.\nStylistic Variation:\n\nDifferent hexagrams can be associated with different musical styles or influences, allowing the algorithm to shift between various styles during the generation process."
@@ -879,7 +891,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 35.199999999999989, 702.0, 138.0, 35.0 ],
-					"text" : "20231215_04_hexagram_music.mid"
+					"text" : "20231215_00_hexagram_music.mid"
 				}
 
 			}
@@ -903,7 +915,7 @@
 					"fontsize" : 13.0,
 					"hint" : "Double-click to assign the file to analyze",
 					"id" : "obj-37",
-					"items" : [ "20231215_00_hexagram_music.mid", ",", "20231215_01_hexagram_music.mid", ",", "20231215_02_hexagram_music.mid", ",", "20231215_03_hexagram_music.mid", ",", "20231215_04_hexagram_music.mid", ",", "20231215_05_hexagram_music.mid", ",", "20231215_06_hexagram_music.mid", ",", "20231215_07_hexagram_music.mid", ",", "20231215_08_hexagram_music.mid" ],
+					"items" : [ "20231215_00_hexagram_music.mid", ",", "20231215_01_hexagram_music.mid", ",", "20231215_02_hexagram_music.mid", ",", "20231215_03_hexagram_music.mid", ",", "20231215_04_hexagram_music.mid", ",", "20231215_05_hexagram_music.mid", ",", "20231215_06_hexagram_music.mid", ",", "20231215_07_hexagram_music.mid", ",", "20231215_08_hexagram_music.mid", ",", "20231215_09_hexagram_music.mid" ],
 					"maxclass" : "chooser",
 					"numinlets" : 1,
 					"numoutlets" : 6,
@@ -1053,7 +1065,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 564.5, 201.5, 265.0, 49.0 ],
-					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231215_08_hexagram_music.mid"
+					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231215_09_hexagram_music.mid"
 				}
 
 			}
@@ -1103,6 +1115,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 1,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
@@ -1480,6 +1494,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-41", 6 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-44", 0 ],
 					"source" : [ "obj-61", 0 ]
 				}
@@ -1517,6 +1538,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-75", 0 ],
 					"source" : [ "obj-68", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-69", 0 ]
 				}
 
 			}

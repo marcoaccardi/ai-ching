@@ -214,25 +214,37 @@ class GeneticMusic:
         return population
 
     # Converts a hexagram into a sequence of musical notes and rests based on the selected mode
-    def hexagram_to_music(self, motif, mode):
+    def hexagram_to_music(self, motif, mode, dynamic_ratio):
         extended_scale = self.extended_modes[mode]
         music_sequences = []
 
         for _ in range(3):  # Creating 3 parts for polyphony
             sequence = []
-
-            for note in motif:
-                note_duration = self.determine_note_duration(note)
-                if note != -1:
-                    # Randomly select a note from the extended range for variation
+            for i, note_val in enumerate(motif):
+                note_duration = self.determine_note_duration(note_val)
+                if note_val != -1:
                     selected_note = random.choice(extended_scale)
+                    dynamic_level = self.determine_dynamic_level(
+                        self.initial_hexagram[i], dynamic_ratio)
+                    n = note.Note(selected_note)
+                    n.duration.quarterLength = note_duration
+                    n.volume.velocity = dynamic_level
+                    sequence.append(n)
                 else:
-                    # Represent a rest
-                    selected_note = None
-                sequence.append((selected_note, note_duration))
+                    r = note.Rest()
+                    r.duration.quarterLength = note_duration
+                    sequence.append(r)
             music_sequences.append(sequence)
 
         return music_sequences
+
+    def determine_dynamic_level(self, hex_char, dynamic_ratio):
+        high_dynamics = range(80, 120)
+        low_dynamics = range(60, 80)
+        if hex_char == 'Y':
+            return random.choice(high_dynamics) if random.random() < dynamic_ratio else random.choice(low_dynamics)
+        else:
+            return random.choice(low_dynamics) if random.random() < dynamic_ratio else random.choice(high_dynamics)
 
     def determine_note_duration(self, note):
         if note != -1:  # If it's a note
@@ -248,15 +260,8 @@ class GeneticMusic:
         for i, sequence in enumerate(music_sequences):
             part = stream.Part()
             part.id = f'Part {i+1}'
-            for note_pitch, duration in sequence:
-                if note_pitch is not None:
-                    n = note.Note(note_pitch)
-                    n.duration.quarterLength = duration
-                    part.append(n)
-                else:
-                    r = note.Rest()
-                    r.duration.quarterLength = duration
-                    part.append(r)
+            for music_note in sequence:
+                part.append(music_note)
             score.append(part)
         return score
 
@@ -280,7 +285,7 @@ class GeneticMusic:
 # Main
 
 
-def main(generations, population_size, hexagram_number, base_duration, mutation_rate, harmonicity_ratio):
+def main(generations, population_size, hexagram_number, base_duration, mutation_rate, harmonicity_ratio, dynamic_ratio):
     gm = GeneticMusic(hexagram_number, base_duration, harmonicity_ratio)
     mode = random.choice(list(gm.modes.keys()))
 
@@ -288,10 +293,10 @@ def main(generations, population_size, hexagram_number, base_duration, mutation_
         generations=generations,
         population_size=population_size,
         mode=mode,
-        mutation_rate=mutation_rate)  # Passing the mutation_rate
+        mutation_rate=mutation_rate)
 
     for i, motif in enumerate(final_motifs):
-        music_sequences = gm.hexagram_to_music(motif, mode)
+        music_sequences = gm.hexagram_to_music(motif, mode, dynamic_ratio)
         gm.save_as_midi(music_sequences, id=i)
 
 
@@ -309,8 +314,9 @@ if __name__ == "__main__":
                         required=True, help='Mutation rate for genetic algorithm')
     parser.add_argument('--harmonicity_ratio', type=float,
                         required=True, help='Harmonicity ratio from 0 to 1')
+    parser.add_argument('--dynamic_ratio', type=float, required=True,
+                        help='Dynamic ratio for high and low dynamics')
 
     args = parser.parse_args()
-
-    main(args.generations, args.population, args.hexagram,
-         args.base_duration, args.mutation_rate, args.harmonicity_ratio)
+    main(args.generations, args.population, args.hexagram, args.base_duration,
+         args.mutation_rate, args.harmonicity_ratio, args.dynamic_ratio)

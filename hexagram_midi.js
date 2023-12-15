@@ -99,10 +99,11 @@ m.addHandler(
     hexagram,
     baseDuration,
     mutation_rate,
-    harmonicity
+    harmonicity,
+    dynamics
   ) => {
     let envName = "generative-music"; // Name of your Python environment
-    let pythonScriptPath = "./genetic_ching3.py"; // Path to your Python script
+    let pythonScriptPath = "./genetic_ching4.py"; // Path to your Python script
 
     // Concatenate the command into a single line
     let command =
@@ -113,8 +114,8 @@ m.addHandler(
       `--hexagram ${hexagram} ` +
       `--base_duration ${baseDuration} ` +
       `--mutation_rate ${mutation_rate} ` +
-      `--harmonicity_ratio ${harmonicity}`;
-    // `--dynamics ${dynamics}`;
+      `--harmonicity_ratio ${harmonicity} ` +
+      `--dynamic_ratio ${dynamics}`;
 
     exec(command, (err, stdout, stderr) => {
       if (err) {
