@@ -124,7 +124,7 @@ class GeneticMusic:
     def repetition_and_variation(self, motif):
         unique_elements = len(set(motif))
         # Adjust the range based on your motif's possible diversity
-        return 1 if 3 <= unique_elements <= 7 else 0
+        return 1 if 3 <= unique_elements <= 5 else 0
 
     # Selects the top half of the population based on fitness scores for breeding
     def select_parents(self, population, mode):
@@ -155,7 +155,7 @@ class GeneticMusic:
         if random.random() < mutation_rate:
             # Apply harmonicity ratio
             consonant_intervals = [3, 4, 5, 7]  # More consonant intervals
-            random_intervals = list(range(1, 8))  # More random intervals
+            random_intervals = [1, 2, 6]  # More dissonant intervals
 
             # Interpolate between random and consonant intervals based on harmonicity_ratio
             interval_choices = random_intervals + \

@@ -10,9 +10,9 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 0.0, 65.0, 343.0, 829.0 ],
+		"rect" : [ 0.0, 65.0, 343.0, 720.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -26,7 +26,7 @@
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
 		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
+		"toolbars_unpinned_last_save" : 15,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
@@ -39,6 +39,42 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-84",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 603.0, 1194.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-81",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 663.0, 1160.0, 107.0, 22.0 ],
+					"text" : "importmovie, bang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-79",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 663.0, 1191.0, 53.0, 22.0 ],
+					"text" : "jit.matrix"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-76",
 					"maxclass" : "preset",
@@ -213,7 +249,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 623.0, 821.0, 505.0, 75.0 ],
-					"presentation_linecount" : 4,
 					"saved_bundle_data" : [  ],
 					"saved_bundle_length" : 0,
 					"text" : "DYNAMICS\n\nADD MORE CONSONANT OR DISSONANT(RANDOM) while creating motivs\n\n"
@@ -439,7 +474,7 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.numbox[2]",
-							"parameter_mmax" : 200.0,
+							"parameter_mmax" : 5000.0,
 							"parameter_mmin" : 1.0,
 							"parameter_shortname" : "live.numbox",
 							"parameter_type" : 0,
@@ -531,7 +566,7 @@
 					"patching_rect" : [ 210.333333333333343, 29.0, 65.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 77.5, 34.0, 65.0, 20.0 ],
-					"text" : "population",
+					"text" : "num motiv",
 					"textcolor" : [ 0.815686274509804, 0.858823529411765, 0.349019607843137, 1.0 ]
 				}
 
@@ -560,7 +595,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 85.0, 138.0, 65.0, 62.0 ],
-					"text" : "100 10 53 4 0.978031 1."
+					"text" : "5000 9 36 5 0.559055 1."
 				}
 
 			}
@@ -707,7 +742,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 353.0, 726.0, 266.0, 49.0 ],
-					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231214_03_hexagram_music.mid"
+					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231215_04_hexagram_music.mid"
 				}
 
 			}
@@ -768,7 +803,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 17.0, 801.0, 504.0, 651.0 ],
+					"patching_rect" : [ 15.0, 871.0, 511.0, 651.0 ],
 					"saved_bundle_data" : [  ],
 					"saved_bundle_length" : 0,
 					"text" : "Mutation Process:\n\nUse hexagrams to determine the probability or type of mutation. For instance, the pattern of 'Y' and 'N' in a hexagram could influence whether a note is mutated, turned into a rest, or replaced with a note from the extended scale.\nCrossover Strategy:\n\nEach hexagram could represent a different crossover strategy. For example, the number of 'Y's in a hexagram might determine the crossover point or how the parents' motifs are combined.\nDynamic Fitness Function:\n\nHexagrams can be used to dynamically alter the criteria in the fitness function. Different hexagrams could prioritize different musical aspects like melodic interest, conformity to scale, or rhythmic complexity.\nRhythmic Patterns:\n\nUse hexagrams to create unique rhythmic patterns in your motifs. The sequence of 'Y' and 'N' can be mapped to different note durations or rhythmic variations.\nHarmonic Progressions:\n\nAssign specific harmonic progressions or chord changes to different hexagrams. This can guide the harmonic structure of generated motifs.\nPolyphonic Textures:\n\nIn a polyphonic setting, different hexagrams can be used to determine the interaction between different voices or parts, influencing how they harmonize or contrast with each other.\nStructural Changes:\n\nUse hexagrams to introduce structural changes in the composition, like changes in tempo, key, or mode, at specific points.\nAdaptive Learning:\n\nThe algorithm can learn from previous generations, and hexagrams can be a part of this learning process. For example, certain hexagrams could trigger adaptations based on the success or failure of previous generations.\nInteractive Composition:\n\nIf the algorithm is part of an interactive system, hexagrams can be used as inputs from users, influencing the direction of the music generation based on user choices or interactions.\nStylistic Variation:\n\nDifferent hexagrams can be associated with different musical styles or influences, allowing the algorithm to shift between various styles during the generation process."
@@ -844,7 +879,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 35.199999999999989, 702.0, 138.0, 35.0 ],
-					"text" : "20231214_03_hexagram_music.mid"
+					"text" : "20231215_04_hexagram_music.mid"
 				}
 
 			}
@@ -868,7 +903,7 @@
 					"fontsize" : 13.0,
 					"hint" : "Double-click to assign the file to analyze",
 					"id" : "obj-37",
-					"items" : [ "20231214_00_hexagram_music.mid", ",", "20231214_01_hexagram_music.mid", ",", "20231214_02_hexagram_music.mid", ",", "20231214_03_hexagram_music.mid", ",", "20231214_04_hexagram_music.mid", ",", "20231214_05_hexagram_music.mid", ",", "20231214_06_hexagram_music.mid", ",", "20231214_07_hexagram_music.mid", ",", "20231214_08_hexagram_music.mid", ",", "20231214_09_hexagram_music.mid" ],
+					"items" : [ "20231215_00_hexagram_music.mid", ",", "20231215_01_hexagram_music.mid", ",", "20231215_02_hexagram_music.mid", ",", "20231215_03_hexagram_music.mid", ",", "20231215_04_hexagram_music.mid", ",", "20231215_05_hexagram_music.mid", ",", "20231215_06_hexagram_music.mid", ",", "20231215_07_hexagram_music.mid", ",", "20231215_08_hexagram_music.mid" ],
 					"maxclass" : "chooser",
 					"numinlets" : 1,
 					"numoutlets" : 6,
@@ -877,7 +912,7 @@
 					"patching_rect" : [ 3.0, 458.893948495388031, 271.0, 222.606051504611969 ],
 					"prefix" : "Macintosh HD:/Users/marco/Documents/maestron_data/Maestron_Data/LIBRARY/MAIN/Electric Hip Hop/bass_legato/Electric Hip Hop 93bpm c 1-4_Parvus.wav/",
 					"presentation" : 1,
-					"presentation_rect" : [ 22.0, 219.151379346847534, 316.0, 502.0 ],
+					"presentation_rect" : [ 22.0, 219.151379346847534, 316.0, 378.0 ],
 					"selectioncolor" : [ 0.36078431372549, 0.796078431372549, 0.988235294117647, 1.0 ],
 					"stripecolor" : [ 0.2, 0.2, 0.2, 1.0 ],
 					"useselectioncolor" : 1
@@ -955,7 +990,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 575.0, 553.0, 55.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 283.0, 193.0, 55.0, 23.0 ],
+					"presentation_rect" : [ 283.0, 609.0, 55.0, 23.0 ],
 					"text" : "midiout"
 				}
 
@@ -1018,7 +1053,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 564.5, 201.5, 265.0, 49.0 ],
-					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231214_09_hexagram_music.mid"
+					"text" : "/Users/marco/Documents/AI-Workshop-SoundOfAI/AI-Ching/midi_generation/20231215_08_hexagram_music.mid"
 				}
 
 			}
@@ -1068,8 +1103,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 1,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
@@ -1599,6 +1632,20 @@
 					"destination" : [ "obj-9", 0 ],
 					"midpoints" : [ 595.0, 407.0, 424.0, 407.0, 424.0, 252.0, 336.5, 252.0 ],
 					"source" : [ "obj-8", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-79", 0 ],
+					"source" : [ "obj-81", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-79", 0 ],
+					"source" : [ "obj-84", 0 ]
 				}
 
 			}
