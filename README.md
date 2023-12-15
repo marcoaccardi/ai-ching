@@ -3,6 +3,13 @@ This project uses a genetic algorithm to generate music based on the concepts of
 
 The script uses a genetic algorithm to generate musical motifs based on hexagrams and musical modes. The process involves creating an initial population of motifs, evolving these motifs over several generations, and then converting the final motifs into music.
 
+### How to run it
+```bash
+pip install -r requirements.txt
+source venv/bin/activate
+python3 genetic_ching4.py --generations 1000 --population 10 --hexagram 20 --base_duration 4 --mutation_rate 0.3 --harmonicity_ratio 0.3 --dynamic_ratio 0.8
+```
+
 ## CODE OVERVIEW
 **Class GeneticMusic**
 Initialization (__init__):
